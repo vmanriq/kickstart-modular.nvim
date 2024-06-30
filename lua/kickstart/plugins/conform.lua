@@ -39,6 +39,7 @@ return {
           --   import_strategy = "fromEnvironment", -- Set import strategy for isort
           -- },
         },
+        typescript = { { "prettier" } },
         javascript = { { "eslint", "prettierd" } },
         vue = { { "eslint" } },
       },

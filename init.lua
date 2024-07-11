@@ -97,6 +97,11 @@ if vim.g.vscode then
   return
 end
 
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { ".pylintrc" },
+  command = "setlocal filetype=ini",
+})
+
 -- [[ Setting options ]]
 require "options"
 

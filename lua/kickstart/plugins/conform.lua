@@ -31,7 +31,7 @@ return {
             "black",
             extra_args = { "--line-length=120" },
             format_on_save = true, -- Enable format on save for Python
-            import_strategy = "fromEnvironment", -- Set import strategy for black
+            --            import_strategy = "fromEnvironment", -- Set import strategy for black
           },
           -- {
           --   "isort",
@@ -45,6 +45,7 @@ return {
       },
       formatters = {
         black = {
+          command = "/Users/vicentemanriquez/.venv/bin/black",
           append_args = { "--line-length=120" },
         },
       },

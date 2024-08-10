@@ -47,7 +47,7 @@ return {
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
       require("lint").linters.pylint.cmd = "python"
       require("lint").linters.pylint.args = { "-m", "pylint", "-f", "json" }
-      vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+      vim.api.nvim_create_autocmd({}, {
         group = lint_augroup,
 
         callback = function()

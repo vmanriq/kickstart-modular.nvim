@@ -166,7 +166,17 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        tsserver = {},
+        tsserver = {
+          filetypes = { "typescript", "vue", "javascript" },
+          init_options = {
+            plugins = {
+              {
+                name = "@vue/typescript-plugin",
+                languages = { "typescript", "vue", "javascript" },
+              },
+            },
+          },
+        },
         ------------------        volar = {
         --          filetypes = { "vue" },
         --},
@@ -212,6 +222,7 @@ return {
         "astro",
         "yamlls",
         "marksman",
+        "volar",
         --        "black",
         --       "isort",
       })

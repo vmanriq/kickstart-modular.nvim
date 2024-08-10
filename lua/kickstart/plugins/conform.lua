@@ -33,13 +33,13 @@ return {
             format_on_save = true, -- Enable format on save for Python
             --            import_strategy = "fromEnvironment", -- Set import strategy for black
           },
-          -- {
-          --   "isort",
-          --   extra_args = { "--profile", "black" }, -- Add black profile to isort
-          --   import_strategy = "fromEnvironment", -- Set import strategy for isort
-          -- },
+          {
+            "isort",
+            extra_args = { "--profile", "black" }, -- Add black profile to isort
+            --   import_strategy = "fromEnvironment", -- Set import strategy for isort
+          },
         },
-        typescript = { { "prettier" } },
+        typescript = { { "eslint", "prettierd" } },
         javascript = { { "eslint", "prettierd" } },
         vue = { { "eslint" } },
       },
@@ -47,6 +47,10 @@ return {
         black = {
           command = "/Users/vicentemanriquez/.venv/bin/black",
           append_args = { "--line-length=120" },
+        },
+        isort = {
+          command = "/Users/vicentemanriquez/.venv/bin/isort",
+          append_args = { "--profile=black", "--line-length=120" },
         },
       },
     },

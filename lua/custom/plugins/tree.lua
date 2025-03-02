@@ -18,6 +18,7 @@ function M.config()
     vim.keymap.set("n", "v", api.node.open.vertical, opts "Open: Vertical Split")
     vim.keymap.del("n", "<C-k>", { buffer = bufnr })
     vim.keymap.set("n", "<S-k>", api.node.open.preview, opts "Open Preview")
+    --toggle
   end
 
   local icons = require "custom.icons"
